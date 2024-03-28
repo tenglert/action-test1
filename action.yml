@@ -17,6 +17,7 @@ runs:
       env:
         INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
       run: |
+        gh --version
         Write-Output "Hello $INPUT_WHO_TO_GREET."
 
     - name: Random Number Generator
