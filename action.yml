@@ -34,4 +34,5 @@ runs:
     - name: Say goodbye
       shell: pwsh
       run: |
+        Write-Output $env:TEST_VAR
         Write-Output "Goodbye $env:INPUT_WHO_TO_GREET."
