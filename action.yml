@@ -17,10 +17,7 @@ runs:
       env:
         INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
       run: |
-        gci env:* | sort-object name
-        Write-Output
-        Write-Output
-        Write-Output
+        $env:TEST_VAR = $env:GITHUB_SERVER_URL.replace('https://'', '')
         Write-Output "Hello $INPUT_WHO_TO_GREET."
 
     - name: Random Number Generator
