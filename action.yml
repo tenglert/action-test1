@@ -17,7 +17,7 @@ runs:
       env:
         INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
       run: |
-        $env:TEST_VAR = $env:GITHUB_SERVER_URL.replace('https://'', '')
+        $env:TEST_VAR = $env:GITHUB_SERVER_URL.replace('https://', '')
         Write-Output "Hello $INPUT_WHO_TO_GREET."
 
     - name: Random Number Generator
