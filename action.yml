@@ -17,7 +17,10 @@ runs:
       env:
         INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
       run: |
-        gh --version
+        gci env:* | sort-object name
+        Write-Output
+        Write-Output
+        Write-Output
         Write-Output "Hello $INPUT_WHO_TO_GREET."
 
     - name: Random Number Generator
